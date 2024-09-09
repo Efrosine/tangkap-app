@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/ads_data.dart';
+import 'presentation/components/ads_data.dart';
 import 'grid_items.dart'; // Import your ads_data file
 
 class HomeScreen extends StatelessWidget {
@@ -134,24 +134,16 @@ class HomeScreen extends StatelessWidget {
             GridView.count(
               crossAxisCount: 4, // Menentukan jumlah item per baris
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),  // Disable scrolling inside grid
+              physics: NeverScrollableScrollPhysics(), // Disable scrolling inside grid
               children: [
-                buildGridItem(Icons.star, 'Best Rating!', () {
-                }),
-                buildGridItem(Icons.attach_money, 'All-in from 19k', () {
-                }),
-                buildGridItem(Icons.local_offer, 'Best Dine Out Deals', () {
-                }),
-                buildGridItem(Icons.breakfast_dining, 'Breakfast Bestie', () {
-                }),
-                buildGridItem(Icons.dinner_dining, 'Hearty Meal', () {
-                }),
-                buildGridItem(Icons.ramen_dining, 'Soup & Comfort', () {
-                }),
-                buildGridItem(Icons.local_fire_department, 'Spicy Festival', () {
-                }),
-                buildGridItem(Icons.restaurant, 'All Cuisines', () {
-                }),
+                buildGridItem(Icons.star, 'Best Rating!', () {}),
+                buildGridItem(Icons.attach_money, 'All-in from 19k', () {}),
+                buildGridItem(Icons.local_offer, 'Best Dine Out Deals', () {}),
+                buildGridItem(Icons.breakfast_dining, 'Breakfast Bestie', () {}),
+                buildGridItem(Icons.dinner_dining, 'Hearty Meal', () {}),
+                buildGridItem(Icons.ramen_dining, 'Soup & Comfort', () {}),
+                buildGridItem(Icons.local_fire_department, 'Spicy Festival', () {}),
+                buildGridItem(Icons.restaurant, 'All Cuisines', () {}),
               ],
             ),
           ],
@@ -176,4 +168,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
