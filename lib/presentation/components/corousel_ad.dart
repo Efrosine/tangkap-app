@@ -8,6 +8,13 @@ class CorouselAd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths3 = [
+      'assets/images/dc3.jpeg',
+      'assets/images/dc3.jpeg',
+      'assets/images/dc3.jpeg',
+      'assets/images/dc3.jpeg',
+      'assets/images/dc3.jpeg',
+    ];
     return SizedBox(
       height: 280,
       child: CarouselView(
@@ -30,8 +37,9 @@ class CorouselAd extends StatelessWidget {
               const Gap(8),
               AspectRatio(
                 aspectRatio: 16 / 9,
-                child: Container(
-                  color: Colors.red,
+                child: Image.asset(
+                  imagePaths3[index],
+                  fit: BoxFit.cover,
                 ),
               ),
               const Gap(8),
