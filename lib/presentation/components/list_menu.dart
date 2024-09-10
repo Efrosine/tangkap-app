@@ -19,66 +19,73 @@ class ListMenu extends StatelessWidget {
       'assets/images/menu8.jpg',
     ];
     return ListView.separated(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemBuilder: (context, index) => Card(
-                child: Row(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 6,
+      separatorBuilder: (context, index) => const Gap(8),
+      itemBuilder: (context, index) => Card(
+          child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+              height: 120,
+              width: 100,
+              child: Image.asset(
+                imagePaths2[index],
+                fit: BoxFit.cover,
+              )),
+          const Gap(8),
+          Padding(
+            padding: const EdgeInsets.all(2),
+            child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox.square(dimension: 100, child: Image.asset(imagePaths2[index])),
-                const Gap(8),
-                Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Text(
+                  'Mie Gacoan',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const Row(
+                  children: [
+                    Icon(Icons.star),
+                    Text('4.5 (69)'),
+                    Icon(Icons.currency_bitcoin),
+                    Text('Noodles'),
+                  ],
+                ),
+                const Row(
+                  children: [
+                    Icon(Icons.delivery_dining),
+                    Text('From 24 min 2KM'),
+                  ],
+                ),
+                const DefaultTextStyle(
+                  style: TextStyle(fontSize: 8),
+                  child: Wrap(
+                    spacing: 4,
                     children: [
-                      Text(
-                        'Mie Gacoan',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                      const Row(
-                        children: [
-                          Icon(Icons.star),
-                          Text('4.5 (69)'),
-                          Icon(Icons.currency_bitcoin),
-                          Text('Noodles'),
-                        ],
-                      ),
-                      const Row(
-                        children: [
-                          Icon(Icons.delivery_dining),
-                          Text('From 24 min 2KM'),
-                        ],
-                      ),
-                      const DefaultTextStyle(
-                        style: TextStyle(fontSize: 8),
-                        child: Wrap(
-                          spacing: 4,
-                          children: [
-                            Chip(
-                              padding: EdgeInsets.all(2),
-                              label: Text('Rp. 15.000 off'),
-                              avatar: CircleAvatar(
-                                child: Icon(Icons.tag),
-                              ),
-                            ),
-                            Chip(
-                              padding: EdgeInsets.all(2),
-                              label: Text('50% off'),
-                              avatar: CircleAvatar(
-                                child: Icon(Icons.tag),
-                              ),
-                            ),
-                          ],
+                      Chip(
+                        padding: EdgeInsets.all(2),
+                        label: Text('Rp. 15.000 off'),
+                        avatar: CircleAvatar(
+                          child: Icon(Icons.tag),
                         ),
-                      )
+                      ),
+                      Chip(
+                        padding: EdgeInsets.all(2),
+                        label: Text('50% off'),
+                        avatar: CircleAvatar(
+                          child: Icon(Icons.tag),
+                        ),
+                      ),
                     ],
                   ),
-                ),
+                )
               ],
-            )),
-        separatorBuilder: (context, index) => const Gap(8),
-        itemCount: 6);
+            ),
+          ),
+        ],
+      )),
+    );
   }
 }

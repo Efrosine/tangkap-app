@@ -11,6 +11,7 @@ class ChipGoup extends StatelessWidget {
     return const Wrap(
       spacing: 4,
       children: [
+        Gap(10),
         Chip(avatar: CircleAvatar(backgroundColor: Colors.red), label: Text('Delivery')),
         Gap(10),
         Chip(avatar: CircleAvatar(backgroundColor: Colors.red), label: Text('Dine Out Deals')),
