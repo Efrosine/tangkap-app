@@ -19,21 +19,20 @@ class GridMenu extends StatelessWidget {
     ];
 
     return SizedBox(
-      height: 180,
-      child: GridView.count(
+      height: 160,
+      child: GridView.builder(
+        padding: const EdgeInsets.only(left: 8),
+        itemCount: imagePaths.length,
         scrollDirection: Axis.horizontal,
-        crossAxisCount: 2,
-        childAspectRatio: 1,
-        mainAxisSpacing: 8,
-        crossAxisSpacing: 8,
-        children: List.generate(8,(index) => Container(
-            child: Center(
-              child: Image.asset(
-                imagePaths[index],
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 1,
+          crossAxisSpacing: 24,
+          mainAxisSpacing: 24,
+        ),
+        itemBuilder: (context, index) => Image.asset(
+          imagePaths[index],
+          fit: BoxFit.cover,
         ),
       ),
     );

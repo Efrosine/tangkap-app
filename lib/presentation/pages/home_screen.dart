@@ -25,20 +25,30 @@ class HomeScreen2 extends StatelessWidget {
               const CustomAppBar(),
               const Gap(38),
               const ChipGoup(),
+              const Gap(8),
               const CorouselAd(),
               const RewardLabel(),
               const GridMenu(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('What`s Good for Breakfast'),
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_forward))
-                ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'What`s Good for Breakfast',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_forward))
+                  ],
+                ),
               ),
               const GridPromo(),
-              Text(
-                'Popular Restourant',
-                style: Theme.of(context).textTheme.titleLarge,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Popular Restourant',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
               const ListMenu()
             ],
