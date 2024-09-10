@@ -7,6 +7,13 @@ class GridPromo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths1 = [
+      'assets/images/discount1.jpg',
+      'assets/images/discount2.jpg',
+      'assets/images/discount3.jpg',
+      'assets/images/discount4.jpg',
+      'assets/images/discount5.jpg',
+    ];
     return SizedBox(
       height: 210,
       child: GridView.count(
@@ -15,13 +22,16 @@ class GridPromo extends StatelessWidget {
         mainAxisSpacing: 8,
         childAspectRatio: 4.5 / 3,
         children: List.generate(
-          4,
+          5,
           (index) => Card(
             child: Column(
               children: [
-                AspectRatio(
-                  aspectRatio: 1,
-                  child: Container(color: Colors.red),
+                SizedBox.square(
+                  dimension: 120,
+                  child: Image.asset(
+                    imagePaths1[index],
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(2),

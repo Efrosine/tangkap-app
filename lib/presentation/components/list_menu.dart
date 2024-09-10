@@ -8,6 +8,16 @@ class ListMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imagePaths2 = [
+      'assets/images/menu1.jpg',
+      'assets/images/menu2.jpg',
+      'assets/images/menu3.jpg',
+      'assets/images/menu4.jpg',
+      'assets/images/menu5.jpg',
+      'assets/images/menu6.jpg',
+      'assets/images/menu7.jpg',
+      'assets/images/menu8.jpg',
+    ];
     return ListView.separated(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
@@ -15,7 +25,7 @@ class ListMenu extends StatelessWidget {
                 child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox.square(dimension: 100, child: Container(color: Colors.red)),
+                SizedBox.square(dimension: 100, child: Image.asset(imagePaths2[index])),
                 const Gap(8),
                 Padding(
                   padding: const EdgeInsets.all(2),
