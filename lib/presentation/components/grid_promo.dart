@@ -17,6 +17,7 @@ class GridPromo extends StatelessWidget {
     return SizedBox(
       height: 210,
       child: GridView.count(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         crossAxisCount: 1,
         scrollDirection: Axis.horizontal,
         mainAxisSpacing: 8,
