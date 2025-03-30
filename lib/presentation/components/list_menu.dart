@@ -18,7 +18,9 @@ class ListMenu extends StatelessWidget {
       'assets/images/menu7.jpg',
       'assets/images/menu8.jpg',
     ];
-    return ListView.separated(
+    
+}
+return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 6,
@@ -88,4 +90,3 @@ class ListMenu extends StatelessWidget {
       )),
     );
   }
-}

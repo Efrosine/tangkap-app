@@ -12,7 +12,7 @@ class ChipGoup extends StatelessWidget {
       spacing: 4,
       children: [
         Gap(10),
-        Chip(avatar: CircleAvatar(backgroundColor: Colors.red), label: Text('Delivery')),
+        Chip(avatar: CircleAvatar(backgroundImage: AssetImage('assets/images/delivery.png'),), label: Text('Delivery')),
         Gap(10),
         Chip(avatar: CircleAvatar(backgroundImage: AssetImage('assets/images/cutlery.png'),), label: Text('Dine Out Deals')),
         Gap(10),

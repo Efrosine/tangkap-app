@@ -16,8 +16,9 @@ class CorouselAd extends StatelessWidget {
       'assets/images/dc3.jpeg',
     ];
     return SizedBox(
-        height: 260,
+        height: 300,
         child: ListView.separated(
+          
             padding: const EdgeInsets.symmetric(horizontal: 16),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => SizedBox(
@@ -33,8 +34,9 @@ class CorouselAd extends StatelessWidget {
                       const Gap(8),
                       AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: Container(
-                          color: Colors.red,
+                        child: Image.asset(
+                          imagePaths3[index],
+                          fit: BoxFit.cover,
                         ),
                       ),
                       const Gap(8),
@@ -57,7 +59,7 @@ class CorouselAd extends StatelessWidget {
                   ),
                 ),
             separatorBuilder: (context, index) => const Gap(8),
-            itemCount: 6)
+            itemCount: imagePaths3.length)
 
         //  CarouselView(
         //   shape: Border.all(),
